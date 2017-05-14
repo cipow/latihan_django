@@ -1,0 +1,48 @@
+{% extends 'form_model/index.html'%}
+
+{% block form_form %}
+<form name="sentMessage" id="contactForm" novalidate>
+  {% load widget_tweaks %}
+  <div class="row control-group">
+      <div class="form-group col-xs-12 floating-label-form-group controls">
+          <label>Name</label>
+          {{ form.name|attr:'class:form-control'|attr:'placeholder:Name' }}
+          <p class="help-block text-danger"></p>
+      </div>
+  </div>
+
+  <div class="row control-group">
+      <div class="form-group col-xs-12 floating-label-form-group controls">
+          <label>Email</label>
+          {{ form.email|attr:'class:form-control'|attr:'placeholder:Email' }}
+          <p class="help-block text-danger"></p>
+      </div>
+  </div>
+
+  <div class="row control-group">
+      <div class="form-group col-xs-12 floating-label-form-group controls">
+          <label>Nomor HP</label>
+          {{ form.no_hp|attr:'class:form-control'|attr:'placeholder:No HP' }}
+          <p class="help-block text-danger"></p>
+      </div>
+  </div>
+
+  <div class="row control-group">
+      <div class="form-group col-xs-12 floating-label-form-group controls">
+          <label>Message</label>
+          {{ form.message|attr:'rows:5'|attr:'class:form-control'|attr:'placeholder:Message' }}
+          <p class="help-block text-danger"></p>
+      </div>
+  </div>
+    
+    <br>
+    <div id="success"></div>
+    <div class="row">
+        <div class="form-group col-xs-12">
+            <button type="submit" class="btn btn-default">Send</button>
+        </div>
+    </div>
+
+
+</form>
+{% endblock %}

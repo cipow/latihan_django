@@ -1,0 +1,14 @@
+{% extends 'blog/index.html' %}
+
+{% block konten %}
+
+{% for profil in profils %}
+<p>
+  <h3>{{ profil.name }}</h3>
+  <img src="{{ profil.picture.url }}">
+  File <br>
+  <a href="{{ profil.dokumen.url }}">dokumen</a>
+</p>
+{% endfor %}
+
+{% endblock %}

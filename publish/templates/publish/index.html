@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>haha</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'publish/file.css' %}" media="screen" title="no title">
+  </head>
+  <body>
+    <ul>
+      <li><a href="{% url 'page' 1%}">page 1</a></li>
+      <li><a href="{% url 'page' 2%}">page 2</a></li>
+      <li><a href="{% url 'page' 3%}">page 3</a></li>
+    </ul>
+    <div>
+      hai
+    </div>
+  </body>
+</html>
